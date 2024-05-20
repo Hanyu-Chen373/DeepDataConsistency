@@ -1,6 +1,6 @@
 # Deep Data Consistency: a Fast and Robust Diffusion Model-based Solver for Inverse Problems
 
-This repository contains the details of *Deep Data Consistency* (**DDC**), which provides an overview of the project, instructions for installation and usage, and other information. [Paper is available here.](https://arxiv.org/abs/2405.10748)
+This repository contains the official implementation of our paper **DDC**: "[Deep Data Consistency: a Fast and Robust Diffusion Model-based Solver for Inverse Problems](https://arxiv.org/abs/2405.10748)". It provides an overview of the project, instructions for installation and usage, and other information.
 
 ## Overview
 
