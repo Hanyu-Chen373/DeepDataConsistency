@@ -1,6 +1,6 @@
 # Deep Data Consistency: a Fast and Robust Diffusion Model-based Solver for Inverse Problems
 
-This repository contains the details of *Deep Data Consistency* (**DDC**), which provides an overview of the project, instructions for installation and usage, and other information.
+This repository contains the details of *Deep Data Consistency* (**DDC**), which provides an overview of the project, instructions for installation and usage, and other information. [Paper is available here.](https://arxiv.org/abs/2405.10748)
 
 ## Overview
 
@@ -9,18 +9,22 @@ We introduce a *deep-learning-based data consistency update approach to solve in
 ![DDC](./figures/cover.png)
 
 Specifically, a neural network is used to update the data consistency step as follows:
-$$\hat{\bm{x}}_{0, \bm{y}} = \hat{\bm{x}}_0 - \Delta_{\phi} \left(\bm{y}, \hat{\bm{x}}_0, t \right)$$
-where $\hat{\bm{x}}_0$ is predicted by pre-trained diffusion network. DDC network ${\phi}$ is a U-Net and is trained by a variational bound training objective:
 
-$$L_{\phi} = \underbrace{- \mathbb{E}_{\bm{x}_0, t, \bm{x}_t, \bm{y}} \left [\log p(\hat{\bm{x}}_{0, \bm{y}} | \bm{x}_t , \bm{y}) \right ]}_{L_{recon}} + \underbrace{\mathbb{E}_{\bm{x}_0, t, \bm{x}_t, \bm{y}}D_{KL} (q(\bm{x}_t | \bm{x}_0 , \bm{y}) \Vert p(\bm{x}_t | \bm{y}))}_{L_{KL}}.$$
-More details are provided in the article.
+$`\hat{\mathbf{x}}_{0, \mathbf{y}} = \hat{\mathbf{x}}_0 - \Delta_{\phi} \left(\mathbf{y}, \hat{\mathbf{x}}_0, t \right)`$
+
+where $\hat{\mathbf{x}}_0$ is predicted by pre-trained diffusion network. DDC network ${\phi}$ is a U-Net and is trained by a variational bound training objective:
+
+$`L_{\phi} = \underbrace{- \mathbb{E}_{\mathbf{x}_0, t, \mathbf{x}_t, \mathbf{y}} \left [\log p(\hat{\mathbf{x}}_{0, \mathbf{y}} | \mathbf{x}_t , \mathbf{y}) \right ]}_{L_{recon}} + \underbrace{\mathbb{E}_{\mathbf{x}_0, t, \mathbf{x}_t, \mathbf{y}}D_{KL} (q(\mathbf{x}_t | \mathbf{x}_0 , \mathbf{y}) \Vert p(\mathbf{x}_t | \mathbf{y}))}_{L_{KL}}.`$
+
+More details are provided in the [paper](https://arxiv.org/abs/2405.10748).
 
 
 ## Installation
 
 ### (1) Clone
 
-Clone the repository.
+    git clone https://github.com/Hanyu-Chen373/DeepDataConsistency.git
+    cd DeepDataConsistency
 
 ### (2) Environment
 
@@ -63,7 +67,7 @@ Here we breifly explain the meanings of the main parameters.
   - **gaussian_blur**: Gaussian deblur task. `deg_scale` is not required.
   - **inpaint_random**: random inpainting which masks pixels on all RGB channels. `deg_scale` is the mask proportion, e.g. 0.92.
   - **jpeg**: JPEG restoration task. `deg_scale` is the quality factor (QF), e.g. 10.
-- **sigma_y**: the Gaussian noise added to the measurement $\bm{y}$.
+- **sigma_y**: the Gaussian noise added to the measurement $\mathbf{y}$.
 - **i**: image folder to store the output. The folder is `/exp/image_samples/{i}`.
 - **ni**: whether to overwrite existing results.
 
@@ -83,6 +87,15 @@ Here is a simple command to train a DDC model.
 
 
 ## Reference
+If you find our work useful, please consider citing following work:
+
+    @article{chen2024deep,
+      title={Deep Data Consistency: a Fast and Robust Diffusion Model-based Solver for Inverse Problems}, 
+      author={Hanyu Chen and Zhixiu Hao and Liying Xiao},
+      journal={arXiv preprint arXiv:2405.10748},
+      year={2024}
+    }
+
 This project implementation is partly inspired by previous repositories:
 - **DDNM:** https://github.com/wyhuai/DDNM
 - **DPS:** https://github.com/DPS2022/diffusion-posterior-sampling
