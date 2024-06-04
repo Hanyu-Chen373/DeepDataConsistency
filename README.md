@@ -44,7 +44,7 @@ Diffusion models are taken from existing pre-trained models on [ImageNet](https:
 - [celeba_hq.ckpt](https://drive.google.com/file/d/1wSoA5fm_d6JBZk4RZ1SzWLMgev4WqH21/view): trained on CelebA by [RePaint](https://github.com/andreas128/RePaint), and should be placed at `/exp/logs/celeba/celeba_hq.ckpt`.
 
 #### DDC models
-The DDC model is trained by us. We provide 2 kinds of DDC model, and both of them can are pretrained to be able to solve 5 inverse problems (SR4, SR8, Gaussian blur, 92% random inpainting, and JPEG-10) with a Gaussian noise strength 0 to 0.05. Here are the download links:
+The DDC model is trained by us. We provide 2 kinds of DDC model, and both of them are pretrained to be able to solve 5 inverse problems (SR4, SR8, Gaussian blur, 92% random inpainting, and JPEG-10) with a Gaussian noise strength from 0 to 0.05. Here are the download links:
 - [Standard](https://drive.google.com/file/d/1ngXz-_zXdWGAy3aERCCY_-zq4dhVuVY0/view?usp=drive_link)
 - [WoLPIPS](https://drive.google.com/file/d/1H1wTxSUFtLcLwLBTe3BZlPNvBQsJWsFg/view?usp=drive_link) (trained without LPIPS loss)
 
