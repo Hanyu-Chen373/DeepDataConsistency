@@ -2,6 +2,8 @@
 
 This repository contains the official implementation of our paper **DDC**: "[Deep Data Consistency: a Fast and Robust Diffusion Model-based Solver for Inverse Problems](https://arxiv.org/abs/2405.10748)". It provides an overview of the project, instructions for installation and usage, and other information.
 
+***Update Nov 2025:*** DDC is accepted by Neural Networks!   [Link](https://www.sciencedirect.com/science/article/pii/S0893608025012158)
+
 ## Overview
 
 We introduce a *deep-learning-based data consistency update approach to solve inverse problems with diffusion models*, which demonstrates **high quality, rapidity, and robustness** in comparison with state-of-the-art methods on different datasets. **Only 5 inference steps are required.**
